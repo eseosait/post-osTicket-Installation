@@ -1,55 +1,235 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
-</p>
+# osTicket: Post-Installation Configuration
 
-<h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
-This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket.<br />
+## Project Overview
 
+In this lab, I performed the post-installation configuration of **osTicket**, an open-source help desk ticketing system. I configured roles, departments, teams, agents, users, Service Level Agreements (SLAs), and help topics to simulate a functional enterprise help desk environment.
 
-<h2>Video Demonstration</h2>
+## Environments and Technologies Used
 
-- ### [YouTube: How to create, work, and resolves tickets within osTicket](https://www.youtube.com)
-
-<h2>Environments and Technologies Used</h2>
-
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Microsoft Azure Virtual Machines
+- Windows 10/11
 - Internet Information Services (IIS)
+- osTicket
+- PHP
+- MySQL
+- HeidiSQL
 
-<h2>Operating Systems Used </h2>
+## osTicket Access URLs
 
-- Windows 10</b> (21H2)
+### Admin/Analyst Login Page
 
-<h2>Ticket Lifecycle Stages</h2>
+```text
+http://localhost/osTicket/scp/login.php
+```
 
-- Intake
-- Assignment and Communication
-- Working the Issue
-- Resolution
+The Staff Control Panel is used by administrators and help desk agents to configure osTicket, manage users, and work support tickets.
 
-<h2>Lifecycle Stages</h2>
+### End-User Portal
 
-<p>
-<img width="2244" height="1401" alt="40EBAF69-6A33-488A-85E2-974ABC5B79BF_1_102_a" src="https://github.com/user-attachments/assets/5b1c46ad-8944-4239-bb32-0f01eb7aa8b6" />
+```text
+http://localhost/osTicket
+```
 
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+The end-user portal allows customers to register, sign in, create tickets, and check the status of existing tickets.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+## Post-Installation Configuration
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+### 1. Agent Panel vs. Admin Panel
+
+After signing in to the Staff Control Panel, I reviewed the two primary interfaces:
+
+- **Agent Panel:** Used by help desk agents to view, assign, manage, and resolve tickets.
+- **Admin Panel:** Used by administrators to configure permissions, agents, departments, teams, SLAs, and help topics.
+
+---
+
+### 2. Configure Roles
+
+Roles group permissions together and determine what agents are allowed to access and manage within osTicket.
+
+**Navigation:**
+
+```text
+Admin Panel → Agents → Roles
+```
+
+I created the following role:
+
+- **Supreme Admin**
+- Granted full administrative permissions
+
+![Supreme Admin Role](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 3. Configure Departments
+
+Departments organize agents by support function and control ticket visibility.
+
+**Navigation:**
+
+```text
+Admin Panel → Agents → Departments
+```
+
+I created the following department:
+
+- **SysAdmins**
+
+![SysAdmins Department](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 4. Configure Teams
+
+Teams allow agents from different departments to work together on specific issues or projects.
+
+**Navigation:**
+
+```text
+Admin Panel → Agents → Teams
+```
+
+I created the following team:
+
+- **Online Banking**
+
+![Online Banking Team](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 5. Configure User Registration
+
+I configured osTicket to require users to register and sign in before submitting tickets.
+
+**Navigation:**
+
+```text
+Admin Panel → Settings → Users
+```
+
+Configuration changes:
+
+- Unchecked **Allow unregistered users to create tickets**
+- Selected **Registration Required**
+- Required users to register and sign in before creating tickets
+
+This setting ensures that every ticket is connected to an authenticated user account.
+
+![User Registration Settings](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 6. Configure Agents
+
+Agents are help desk workers responsible for receiving, managing, and resolving support tickets.
+
+**Navigation:**
+
+```text
+Admin Panel → Agents → Add New
+```
+
+I created the following agents:
+
+| Agent | Department |
+|---|---|
+| Jane | SysAdmins |
+| John | Support |
+
+![Configured Agents](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 7. Configure Users
+
+Users represent customers or employees who submit support requests through the end-user portal.
+
+**Navigation:**
+
+```text
+Agent Panel → Users → Add New
+```
+
+I created the following users:
+
+- Karen
+- Ken
+
+![Configured Users](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 8. Configure Service Level Agreements
+
+Service Level Agreements establish the expected response and resolution timeframes for tickets based on severity.
+
+**Navigation:**
+
+```text
+Admin Panel → Manage → SLA
+```
+
+I configured the following SLA plans:
+
+| SLA Plan | Grace Period | Schedule |
+|---|---:|---|
+| Sev-A | 1 hour | 24/7 |
+| Sev-B | 4 hours | 24/7 |
+| Sev-C | 8 hours | Business Hours |
+
+![Configured SLA Plans](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+### 9. Configure Help Topics
+
+Help topics allow users to categorize their requests when creating tickets. This helps route tickets to the appropriate department or support team.
+
+**Navigation:**
+
+```text
+Admin Panel → Manage → Help Topics
+```
+
+I created the following help topics:
+
+- Business Critical Outage
+- Personal Computer Issues
+- Equipment Request
+- Password Reset
+- Other
+
+![Configured Help Topics](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+
+---
+
+## Configuration Summary
+
+| Component | Configuration |
+|---|---|
+| Role | Supreme Admin |
+| Department | SysAdmins |
+| Team | Online Banking |
+| Agents | Jane and John |
+| Users | Karen and Ken |
+| SLA Plans | Sev-A, Sev-B, and Sev-C |
+| Help Topics | Business outage, computer issues, equipment requests, password resets, and other |
+| User Access | Registration and login required |
+
+## Skills Demonstrated
+
+- Help desk system administration
+- Role-based access control
+- Permission management
+- Department and team configuration
+- Agent and user account administration
+- Service Level Agreement configuration
+- Ticket categorization and workflow organization
+- Enterprise help desk ticketing experience
+
+## Conclusion
+
+This lab provided hands-on experience configuring osTicket after installation. I created roles, departments, teams, agents, users, SLAs, and help topics to build a structured help desk environment.
+
+These configurations created the foundation needed to simulate real-world ticket intake, assignment, escalation, troubleshooting, and resolution.
