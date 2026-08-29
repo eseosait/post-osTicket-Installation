@@ -122,7 +122,8 @@ Configuration changes:
 
 This setting ensures that every ticket is connected to an authenticated user account.
 
-![User Registration Settings](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+![User Registration Settings] <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/9450c9c0-6e26-43a4-bbd0-07dfd4aad88f" />
+
 
 ---
 
