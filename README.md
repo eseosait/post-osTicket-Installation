@@ -178,7 +178,8 @@ I configured the following SLA plans:
 | Sev-B | 4 hours | 24/7 |
 | Sev-C | 8 hours | Business Hours |
 
-![Configured SLA Plans](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+![Configured SLA Plans] <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/4b26b941-1a78-45ca-b166-25c5a79425b3" />
+
 
 ---
 
