@@ -94,7 +94,8 @@ I created the following team:
 
 - **Online Banking**
 
-![Online Banking Team](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+![Online Banking Team] <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/68deacb1-da53-4c5e-8114-f8e72a61b2d3" />
+
 
 ---
 
