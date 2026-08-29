@@ -132,12 +132,8 @@ Admin Panel → Agents → Add New
 
 I created the following agents:
 
-| Agent | Department |
-|---|---|
-| Jane | SysAdmins |
-| John | Support |
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/cb7b471b-3660-4996-a652-75b89cae093e" />
 
-![Configured Agents](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
 
 ---
 
