@@ -58,7 +58,9 @@ I created the following role:
 - **Supreme Admin**
 - Granted full administrative permissions
 
-![Supreme Admin Role](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+![Supreme Admin Role] <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/d8db915e-0dc9-4ae0-9919-c13eb593169e" /> <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/7053069d-9281-40d5-838a-f4e4023422e6" />
+
+
 
 ---
 
