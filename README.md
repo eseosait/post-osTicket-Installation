@@ -155,11 +155,8 @@ Agent Panel → Users → Add New
 ```
 
 I created the following users:
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/6efe0990-032e-415a-b12a-81658c06e5ad" />
 
-- Karen
-- Ken
-
-![Configured Users](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
 
 ---
 
