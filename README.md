@@ -76,7 +76,9 @@ I created the following department:
 
 - **SysAdmins**
 
-![SysAdmins Department](https://github.com/user-attachments/assets/ADD-YOUR-IMAGE-LINK-HERE)
+![SysAdmins Department] <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/57728352-7765-472d-b470-8c5b71544ce6" /> <img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/1b0ae461-1830-456d-89b2-f61e80b219f9" />
+
+
 
 ---
 
